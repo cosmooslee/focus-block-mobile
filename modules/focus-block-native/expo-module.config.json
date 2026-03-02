@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["FocusBlockNativeModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.focusblocknative.FocusBlockNativeModule"]
+  }
+}

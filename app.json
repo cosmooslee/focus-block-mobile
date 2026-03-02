@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Focus Block",
+    "slug": "focus-block",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#18181b"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.focusblock.app",
+      "infoPlist": {
+        "NSFamilyControlsUsageDescription": "집중 모드에서 선택한 앱과 웹사이트를 차단하기 위해 Screen Time 접근 권한이 필요합니다.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.focusblock.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#18181b",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_SPECIAL_USE",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withScreenTimeEntitlement",
+      "./plugins/withVpnPermissions"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b0357062-8cce-4775-8500-cf85840727a1"
+      }
+    },
+    "owner": "yidoedition"
+  }
+}
