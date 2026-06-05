@@ -17,7 +17,7 @@ cd ~/Projects/offline-club-handoff
 git clone --branch offline-club-mvp-handoff --depth 1 https://github.com/cosmooslee/focus-block-mobile.git handoff-repo
 cd handoff-repo
 
-cat handoff/offline-club-mvp/chunk-*.b64 | base64 --decode > offline-club-mvp.bundle
+cat handoff/offline-club-mvp/chunk-*.b64 | base64 -D > offline-club-mvp.bundle
 shasum -a 256 offline-club-mvp.bundle
 
 git clone offline-club-mvp.bundle offline-club
@@ -30,6 +30,8 @@ The `shasum` output should be:
 ```text
 ffe6030b10f775f501533623e5c0711779b875d689c98af00173d4832b86ae15  offline-club-mvp.bundle
 ```
+
+If your Mac has GNU `base64`, `base64 --decode` also works.
 
 ## Continue In MacBook Codex
 
